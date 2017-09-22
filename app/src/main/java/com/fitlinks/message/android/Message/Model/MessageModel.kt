@@ -3,6 +3,7 @@ package com.fitlinks.message.android.Message.Model
 /**
  * Created by venu on 22-09-2017.
  */
+import com.fitlinks.message.android.Message.Models.InvitieResponse
 import com.stfalcon.chatkit.commons.models.IMessage
 import com.stfalcon.chatkit.commons.models.MessageContentType
 import com.stfalcon.chatkit.commons.models.IUser
