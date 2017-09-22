@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "739020259665",
+    "firebase_url": "https://fitlinks-fe24e.firebaseio.com",
+    "project_id": "fitlinks-fe24e",
+    "storage_bucket": "fitlinks-fe24e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739020259665:android:c202fa3c65655505",
+        "android_client_info": {
+          "package_name": "com.fitlinks.message.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739020259665-qb7agj783neq48b40h7i4kekrj9e73bc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fitlinks.message.android",
+            "certificate_hash": "13ac34a9551446befcac8e28e100677122f257ce"
+          }
+        },
+        {
+          "client_id": "739020259665-qqbi0pr13n5e2lg9n11e395mtmhsoltr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjQ90lqCOVKsTb6w6PrrOHyE24sgLyZo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739020259665-qqbi0pr13n5e2lg9n11e395mtmhsoltr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
