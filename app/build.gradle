@@ -28,6 +28,10 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.github.stfalcon:chatkit:0.2.2'
+    debugImplementation('com.amitshekhar.android:debug-db:1.0.1') {
+        exclude group: 'com.google.code.gson', module: 'gson'
+    }
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.google.firebase:firebase-auth:11.0.4'
     compile 'com.google.firebase:firebase-storage:11.0.4'
     compile 'com.google.firebase:firebase-database:11.0.4'

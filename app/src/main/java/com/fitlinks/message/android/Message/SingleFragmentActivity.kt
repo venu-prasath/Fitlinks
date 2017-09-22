@@ -6,7 +6,6 @@ package com.fitlinks.message.android.Message
 import android.support.v4.app.Fragment
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.example.venu.fitlinkstest1.R
 import com.fitlinks.message.android.R
 
 /**
@@ -21,11 +20,11 @@ abstract class SingleFragmentActivity: AppCompatActivity() {
         setContentView(R.layout.activity_message)
 
         val fm = supportFragmentManager
-        var fragment = fm.findFragmentById(R.id.FragmentContainer)
+        var fragment = fm.findFragmentById(R.id.fragment_container)
 
         if(fragment == null) {
             fragment = createFragment()
-            fm.beginTransaction().add(R.id.FragmentContainer,fragment).commit()
+            fm.beginTransaction().add(R.id.fragment_container,fragment).commit()
         }
     }
 }

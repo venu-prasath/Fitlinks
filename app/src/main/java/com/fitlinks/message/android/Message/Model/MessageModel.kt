@@ -5,7 +5,9 @@ package com.fitlinks.message.android.Message.Model
  */
 import com.stfalcon.chatkit.commons.models.IMessage
 import com.stfalcon.chatkit.commons.models.MessageContentType
+import com.stfalcon.chatkit.commons.models.IUser
 import java.sql.Timestamp
+import com.google.firebase.database.Exclude
 import java.util.*
 
 /**

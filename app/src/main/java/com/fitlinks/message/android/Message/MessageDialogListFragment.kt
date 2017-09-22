@@ -10,13 +10,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.example.venu.fitlinkstest1.R
+import com.fitlinks.message.android.Message.Model.ChatModels
+import com.fitlinks.message.android.R
+
 
 /**
  * Created by venu on 22-09-2017.
  */
 class MessageDialogListFragment: Fragment() {
-    lateinit var dialogs: ArrayList<chatModel>
+    lateinit var dialogs: ArrayList<ChatModels>
     private var mRecyclerView: RecyclerView? = null
     private var mAdapter: MessageListAdapter? = null
     private var mImageView: ImageView? = null

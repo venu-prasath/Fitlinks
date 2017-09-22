@@ -76,4 +76,6 @@ class ChatModels : IDialog<MessageModel> {
     override fun getUnreadCount(): Int {
         return count
     }
+
+    
 }
