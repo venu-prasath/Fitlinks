@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Fitlinks</string>
+    <string name="hint_enter_a_message"> Type your message...</string>
+    <string name="no_chat_dialogs_buddy">Send your first message as the requirements to the trainer</string>
+    <string name="action_gallery_alt">Choose from gallery</string>
+    <string name="action_camera">Take picture</string>
+    <string name="no_chat_dialogs_trainer">No chat messages found\n\nAdd buddy to start chat</string>
+    <string name="title_activity_maps">Map</string>
+
 </resources>
