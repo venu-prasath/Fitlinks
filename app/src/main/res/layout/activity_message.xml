@@ -18,13 +18,12 @@
             android:padding="16dp"
             android:textColor="@color/secondary_text"
             android:textSize="18sp"
-            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/fab"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/no_chat_dialogs_player"
-            tools:visibility="visible" />
+            android:text="@string/no_chat_dialogs_player"
+            android:visibility="visible" />
 
         <com.stfalcon.chatkit.dialogs.DialogsList
             android:id="@+id/messageList"

@@ -6,9 +6,11 @@ package com.fitlinks.message.android.Message
 import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.ActionBar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.support.v7.widget.Toolbar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +18,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.fitlinks.message.android.Message.Model.ChatModels
 import com.fitlinks.message.android.R
-//import kotlinx.android.synthetic.main.item_message_dialoglist.*
+import kotlinx.android.synthetic.main.item_message_dialoglist.*
+import kotlinx.android.synthetic.main.old_activity_message.*
 
 class MessageDialogListFragment: Fragment() {
     lateinit var dialogs: ArrayList<ChatModels>
@@ -27,7 +30,6 @@ class MessageDialogListFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater?.inflate(R.layout.old_fragment_recyclerview_dialoglist, container, false)
 
-        //setSupportActionBar(toolbar)
         mRecyclerView = view?.findViewById<View>(R.id.recycler_view) as RecyclerView
         mRecyclerView?.setLayoutManager(LinearLayoutManager(getActivity()))
         updateUI()
@@ -43,7 +45,7 @@ class MessageDialogListFragment: Fragment() {
         private var mSender: TextView? = null
         private var mMessage: TextView? = null
 
-        fun MessageHolder(layoutInflater: LayoutInflater,parent: ViewGroup?) {
+        fun MessageHolder() {
             mSender = itemView.findViewById(R.id.dialogName)
             mMessage = itemView.findViewById(R.id.dialogLastMessage)
         }
