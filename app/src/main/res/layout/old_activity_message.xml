@@ -1,65 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:visibility="visible"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme" />
+
+    <FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_container"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" >
+    </FrameLayout>
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <TextView
+        android:id="@+id/tvEmptyResults"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="196dp"
+        android:layout_marginTop="193dp"
+        android:fontFamily="@font/raleway_semi_bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/FloatingActionBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/no_chat_dialogs_player"
+        tools:visibility="visible" />
 
-        <TextView
-            android:id="@+id/tvEmptyResults"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="196dp"
-            android:layout_marginTop="193dp"
-            android:fontFamily="@font/raleway_semi_bold"
-            android:gravity="center"
-            android:padding="16dp"
-            android:textColor="@color/secondary_text"
-            android:textSize="18sp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/fab"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/no_chat_dialogs_player"
-            tools:visibility="visible" />
-
-        <com.stfalcon.chatkit.dialogs.DialogsList
-            android:id="@+id/messageList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            app:dialogDividerLeftPadding="8dp"
-            app:dialogItemBackground="@color/grey_100"
-            app:dialogMessageTextSize="16sp"
-            app:dialogTitleTextColor="@color/primary_text"
-            app:dialogTitleTextStyle="normal"
-            app:dialogUnreadBubbleBackgroundColor="@color/accent"
-            app:dialogUnreadItemBackground="@color/white"
-            app:dialogUnreadTitleTextStyle="bold"/>
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="24dp"
-            android:layout_marginRight="36dp"
-            android:tint="@color/common_google_signin_btn_text_dark_default"
-            app:backgroundTint="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:rippleColor="@color/common_google_signin_btn_text_dark_default"
-            app:srcCompat="@android:drawable/ic_input_add" />
-    </android.support.constraint.ConstraintLayout>
-</FrameLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/FloatingActionBar"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="36dp"
+        android:tint="@color/common_google_signin_btn_text_dark_default"
+        app:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:rippleColor="@color/common_google_signin_btn_text_dark_default"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:visibility="visible"/>
+</android.support.constraint.ConstraintLayout>

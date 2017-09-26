@@ -6,6 +6,7 @@ package com.fitlinks.message.android.Message
 import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -15,21 +16,19 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.fitlinks.message.android.Message.Model.ChatModels
 import com.fitlinks.message.android.R
+//import kotlinx.android.synthetic.main.item_message_dialoglist.*
 
-
-/**
- * Created by venu on 22-09-2017.
- */
 class MessageDialogListFragment: Fragment() {
-     lateinit var dialogs: ArrayList<ChatModels>
+    lateinit var dialogs: ArrayList<ChatModels>
     private var mRecyclerView: RecyclerView? = null
     private var mAdapter: MessageListAdapter? = null
     private var mImageView: ImageView? = null
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        super.onViewCreated(view,savedInstanceState)
-        val view = inflater?.inflate(R.layout.fragment_recyclerview_dialoglist, container, false)
-        mRecyclerView = view?.findViewById<View>(R.id.messageList) as RecyclerView
+        val view = inflater?.inflate(R.layout.old_fragment_recyclerview_dialoglist, container, false)
+
+        //setSupportActionBar(toolbar)
+        mRecyclerView = view?.findViewById<View>(R.id.recycler_view) as RecyclerView
         mRecyclerView?.setLayoutManager(LinearLayoutManager(getActivity()))
         updateUI()
         return view
@@ -37,15 +36,14 @@ class MessageDialogListFragment: Fragment() {
 
     private fun updateUI() {
         mAdapter = MessageListAdapter()
-        mRecyclerView.setAdapter(mAdapter)
+        mRecyclerView?.setAdapter(mAdapter)
     }
 
-    private class MessageHolder(itemView: View): RecyclerView.ViewHolder(itemView) { //what parameter
+    public class MessageHolder(itemView: View): RecyclerView.ViewHolder(itemView) { //what parameter
         private var mSender: TextView? = null
         private var mMessage: TextView? = null
 
         fun MessageHolder(layoutInflater: LayoutInflater,parent: ViewGroup?) {
-            super(layoutInflater.inflate(R.layout.item_message_dialoglist, parent, false)) //call constructor
             mSender = itemView.findViewById(R.id.dialogName)
             mMessage = itemView.findViewById(R.id.dialogLastMessage)
         }
@@ -59,12 +57,12 @@ class MessageDialogListFragment: Fragment() {
     private class MessageListAdapter: RecyclerView.Adapter<MessageHolder>() {
         private var data = null
         fun MessageListAdapter() {
-
+            //initializing data received from firebase
         }
 
         override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MessageHolder {
-            val layoutInflater = LayoutInflater.from(RecyclerView.context)
-            return MessageHolder(layoutInflater, parent)
+            var listView: View = LayoutInflater.from(parent?.getContext()).inflate(R.layout.item_message_dialoglist,parent,false)
+            return MessageHolder(listView)
         }
 
         override fun onBindViewHolder(holder: MessageHolder?, position: Int) {
@@ -72,7 +70,7 @@ class MessageDialogListFragment: Fragment() {
         }
 
         override fun getItemCount(): Int {
-
+            return 100
         }
     }
 

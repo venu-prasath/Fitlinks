@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- recycler view extended -->
-<com.stfalcon.chatkit.dialogs.DialogsList
-    android:id="@+id/messageList"
+<android.support.v7.widget.RecyclerView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/recycler_view"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    app:dialogDividerLeftPadding="@dimen/default_mini_padding"
-    app:dialogItemBackground="@color/grey_100"
-    app:dialogMessageTextSize="@dimen/text_16"
-    app:dialogTitleTextColor="@color/primary_text"
-    app:dialogTitleTextStyle="normal"
-    app:dialogUnreadBubbleBackgroundColor="@color/accent"
-    app:dialogUnreadItemBackground="@color/white"
-    app:dialogUnreadTitleTextStyle="bold"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
+    android:layout_height="match_parent" />
+
+
+

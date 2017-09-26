@@ -17,7 +17,7 @@
             android:layout_width="@dimen/dialog_avatar_width"
             android:layout_height="@dimen/dialog_avatar_height"
             android:layout_margin="16dp"
-            tools:src="@mipmap/ic_launcher_round"/>
+            android:src="@mipmap/ic_launcher_round"/>
 
         <TextView
             android:id="@id/dialogName"
@@ -32,7 +32,7 @@
             android:includeFontPadding="false"
             android:maxLines="1"
             android:textColor="@color/primary_text"
-            tools:text="Some user"/>
+            android:text="User Name"/>
 
         <TextView
             android:id="@id/dialogDate"
@@ -44,7 +44,7 @@
             android:ellipsize="end"
             android:fontFamily="@font/roboto_regular"
             android:maxLines="1"
-            tools:text="16:32"/>
+            android:text="16:32"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -60,7 +60,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginEnd="7dp"
-                tools:src="@mipmap/ic_launcher_round"/>
+                android:src="@mipmap/ic_launcher_round"/>
 
 
             <TextView
@@ -74,7 +74,8 @@
                 android:gravity="top"
                 android:maxLines="1"
                 android:textColor="@color/secondary_text"
-                tools:text="Some long string"/>
+                android:text="last message"
+                    />
 
         </RelativeLayout>
 
@@ -91,21 +92,6 @@
             android:fontFamily="@font/roboto_regular"
             android:gravity="center"
             android:lines="1"/>
-
-        <FrameLayout
-            android:id="@id/dialogDividerContainer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="16dp">
-
-            <View
-                android:id="@id/dialogDivider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/dialog_divider"/>
-
-        </FrameLayout>
 
     </RelativeLayout>
 
