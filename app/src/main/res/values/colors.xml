@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="app_light_ripple">#FFF9C4</color>
+    <color name="accent_light">#feecb2</color>
+    <color name="white_dim">#33ffffff</color>
+    <color name="fb">#3C5A9A</color>
+    <color name="fb_pressed">#335DA8DC</color>
+    <color name="twitter">#5DA8DC</color>
+    <color name="twitter_pressed">#335DA8DC</color>
+    <color name="colorPrimary">#ffd8153c</color>
+    <color name="colorAccent">#ff29d144</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_ripple">#42ffffff</color>
+    <color name="card_audio_bg">#1A202C</color>
+    <color name="scrim">#99323232</color>
+    <color name="scrim_white">#A3ffffff</color>
+    <color name="vision_mission_goals">#795548</color>
+    <color name="vision_mission_goals_dark">#48332b</color>
+    <color name="google">#dd4b39</color>
+    <color name="google_pressed">#33dd4b39</color>
+    <color name="primary">#2196f3</color>
+    <color name="primary_light">#6ec6ff</color>
+    <color name="primary_text">#1A202C</color>
+    <color name="secondary_text">#9098A2</color>
+    <color name="primary_dark">#0069c0</color>
+    <color name="accent">#FEC200</color>
+
 </resources>

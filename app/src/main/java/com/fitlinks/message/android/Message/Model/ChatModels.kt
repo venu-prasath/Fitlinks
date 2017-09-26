@@ -3,6 +3,8 @@ package com.fitlinks.message.android.Message.Model
 /**
  * Created by venu on 22-09-2017.
  */
+
+import com.fitlinks.message.android.Message.Models.InvitieResponse
 import com.stfalcon.chatkit.commons.models.IDialog
 import com.stfalcon.chatkit.commons.models.IUser
 import java.util.ArrayList
@@ -27,19 +29,14 @@ class ChatModels : IDialog<MessageModel> {
 
     //view img of person chatting
     override fun getDialogPhoto(): String {
-        if (AOTMApp.sInstance.isCoach)
-            return messageDialogModel.playerImg
-        else
-            return messageDialogModel.coachImg
+        return ""
     }
 
     //view name of person chatting
     override fun getDialogName(): String {
-        if (AOTMApp.sInstance.isCoach)
-            return messageDialogModel.playerName
-        else
-            return messageDialogModel.coachName
+       return ""
     }
+
 
     //return arraylist of email,img,name ---- return user details
     override fun getUsers(): List<IUser> {

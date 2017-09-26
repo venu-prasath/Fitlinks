@@ -1,11 +1,12 @@
 package com.fitlinks.message.android.Message
 
-import android.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import android.support.v4.app.Fragment
 
-class MessageActivity : AppCompatActivity() {
+/**
+ * Created by venu on 25-09-2017.
+ */
+class MessageDialogListActvity: SingleFragmentActivity() {
     override protected fun createFragment(): Fragment {
         return MessageDialogListFragment()
     }
-
 }
