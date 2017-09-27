@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter
 import android.animation.ObjectAnimator
 import android.app.Activity
 import android.app.ProgressDialog
+//import android.app.ProgressDialog
 import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View

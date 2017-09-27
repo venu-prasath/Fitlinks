@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -12,16 +10,20 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
         app:elevation="4dp">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?android:attr/actionBarSize"/>
+            android:layout_height="?android:attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
     </android.support.design.widget.AppBarLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <com.stfalcon.chatkit.messages.MessagesList
             android:id="@+id/messagesList"
             android:layout_width="match_parent"
@@ -37,18 +39,14 @@
 
             <com.stfalcon.chatkit.messages.MessageInput
                 android:id="@+id/input"
-                android:layout_width="400dp"
-                android:layout_height="60dp"
-                android:layout_alignParentBottom="false"
-                android:layout_alignParentStart="false"
-                app:attachmentButtonHeight="32dp"
+                android:layout_width="match_parent"
+                android:textIsSelectable="true"
+                android:layout_height="match_parent"
                 app:attachmentButtonIcon="@drawable/ic_attach_file_24dp"
-                app:attachmentButtonMargin="@drawable/bubble_circle"
-                app:attachmentButtonWidth="32dp"
                 app:inputButtonBackground="@drawable/bubble_circle"
                 app:inputButtonIcon="@drawable/ic_send"
                 app:inputHint="@string/hint_enter_a_message"
-                app:showAttachmentButton="true" />
+                app:showAttachmentButton="true"/>
         </android.support.v7.widget.CardView>
     </RelativeLayout>
 
@@ -78,21 +76,26 @@
                 android:layout_width="350dp"
                 android:layout_height="46dp"
                 android:clickable="true"
+                android:visibility="visible"
                 android:focusable="true"
                 android:gravity="fill_vertical"
                 android:orientation="horizontal">
 
                 <ImageButton
                     style="@style/Widget.AppCompat.ImageButton"
+                    android:id="@+id/Camera"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/ic_camera"
                     android:contentDescription="@string/action_camera" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=" Take picture" />
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:text="  Take picture" />
             </LinearLayout>
 
             <LinearLayout
@@ -101,10 +104,13 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="left"
+                android:visibility="visible"
                 android:orientation="horizontal">
 
                 <ImageButton
+                    android:id="@+id/Gallery"
                     android:layout_width="24dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_height="24dp"
                     android:background="@drawable/ic_gallery"
                     android:contentDescription="@string/action_gallery_alt" />
@@ -112,6 +118,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
                     android:text="  Choose from gallery" />
             </LinearLayout>
 

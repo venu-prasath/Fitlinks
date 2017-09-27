@@ -24,12 +24,7 @@
       </value>
     </option>
   </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-    <file url="file://$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/fitlinks/message/android/ChatWindowFragment.kt" />
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

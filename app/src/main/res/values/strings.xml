@@ -6,5 +6,6 @@
     <string name="action_camera">Take picture</string>
     <string name="no_chat_dialogs_trainer">No chat messages found\n\nAdd buddy to start chat</string>
     <string name="title_activity_maps">Map</string>
+    <string name="complete_action_with">Complete action with</string>
 
 </resources>

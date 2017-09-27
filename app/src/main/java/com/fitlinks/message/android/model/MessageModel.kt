@@ -10,17 +10,17 @@ import java.sql.Timestamp
 import java.util.*
 
 data class MessageModel(
-        val msgId: String = "",
-        val ownerImg: String = "",
-        val receiverId: String = "",
-        val ownerName: String = "",
-        val receiverName: String = "",
-        val updatedTimeStamp: Long = -1,
-        val receiverImg: String = "",
-        val message: String = "",
-        val image: String? = null,
-        val ownerId: String = "",
-        val channelId: String = "",
+        var msgId: String = "",
+        var ownerImg: String = "",
+        var receiverId: String = "",
+        var ownerName: String = "",
+        var receiverName: String = "",
+        var updatedTimeStamp: Long = -1,
+        var receiverImg: String = "",
+        var message: String = "",
+        var image: String? = null,
+        var ownerId: String = "",
+        var channelId: String = "",
         @Exclude
         var isOutComing: Boolean = false
 ) : IMessage, MessageContentType, MessageContentType.Image {
@@ -47,7 +47,7 @@ data class MessageModel(
     }
 
     override fun getImageUrl(): String? {
-        return null
+        return image
     }
 
 }
