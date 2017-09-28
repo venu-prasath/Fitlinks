@@ -6,6 +6,7 @@ import com.stfalcon.chatkit.commons.ImageLoader
 
 /**
  * Created by aditlal on 12/07/17.
+ * Taken from AOTM-reference
  */
 class GlideImageLoader : ImageLoader {
     override fun loadImage(imageView: ImageView?, url: String?) {

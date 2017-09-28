@@ -8,19 +8,20 @@ import com.fitlinks.message.android.R
 
 /**
 * Created by venu on 26-09-2017.
+ * Contains only the adapter
  */
-public class MessageListAdapter: RecyclerView.Adapter<MessageDialogListFragment.MessageHolder>() {
+public class OldMessageListAdapter : RecyclerView.Adapter<OldMessageDialogListFragment.MessageHolder>() {
     private var data = null
     fun MessageListAdapter() {
         //initializing data received from firebase
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MessageDialogListFragment.MessageHolder {
+    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): OldMessageDialogListFragment.MessageHolder {
         var listView: View = LayoutInflater.from(parent?.getContext()).inflate(R.layout.item_message_dialoglist,parent,false)
-        return MessageDialogListFragment.MessageHolder(listView)
+        return OldMessageDialogListFragment.MessageHolder(listView)
     }
 
-    override fun onBindViewHolder(holder: MessageDialogListFragment.MessageHolder?, position: Int) {
+    override fun onBindViewHolder(holder: OldMessageDialogListFragment.MessageHolder?, position: Int) {
         holder?.bind()
     }
 

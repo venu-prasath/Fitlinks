@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.old_activity_message.*
  * Created by venu on 22-09-2017.
  */
 
-abstract class SingleFragmentActivity: AppCompatActivity() {
+abstract class OldSingleFragmentActivity : AppCompatActivity() {
     protected abstract fun createFragment(): Fragment
 
     override protected fun onCreate(savedInstanceState: Bundle?){
@@ -26,7 +26,7 @@ abstract class SingleFragmentActivity: AppCompatActivity() {
         setSupportActionBar(Toolbar)
         supportActionBar!!.setTitle("Messages")
         getSupportActionBar()?.setDisplayHomeAsUpEnabled(true);
-        val floatingActionBar = findViewById<View>(R.id.FloatingActionBar) as FloatingActionButton
+        val floatingActionBar = findViewById(R.id.FloatingActionBar) as FloatingActionButton
 
 
         val fm = supportFragmentManager
@@ -35,7 +35,6 @@ abstract class SingleFragmentActivity: AppCompatActivity() {
         if(fragment == null) {
             floatingActionBar.hide()
             tvEmptyResults.visibility = View.GONE
-            //activityToolbar.visibility = View.GONE
             fragment = createFragment()
             fm.beginTransaction().add(R.id.fragment_container,fragment).commit()
         }

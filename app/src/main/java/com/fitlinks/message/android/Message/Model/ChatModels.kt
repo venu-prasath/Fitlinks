@@ -15,7 +15,7 @@ import java.util.ArrayList
 
 class ChatModels : IDialog<MessageModel> {
     lateinit var messageDialogModel: MessageDialogModel
-    var count: Int = 0
+    var count: Int = 0 //count of unread messasges
     var message: MessageModel? = null
 
     fun setChatLastMessage(msg: MessageModel) {

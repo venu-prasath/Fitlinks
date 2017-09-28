@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- recycler view extended -->
+<!-- recycler view extended
+       this code is probably not needed.
+       keeping it in repo for a backup-->
 <com.stfalcon.chatkit.dialogs.DialogsList
-    android:id="@+id/messageList"
+    android:id="@+id/messageListt"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentTop="true"

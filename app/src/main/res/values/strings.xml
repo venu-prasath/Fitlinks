@@ -2,4 +2,5 @@
     <string name="app_name">Fitlinks</string>
     <string name="title_activity_activity">activity</string>
     <string name="no_chat_dialogs_player">No chat messages found\n\nAdd coach or a buddy to start chat</string>
+    <string name="no_chat_dialogs_coach">No chat messages found\n\nAdd player to start chat</string>
 </resources>
